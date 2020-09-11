@@ -12,7 +12,7 @@ The working of this sentiment-analyzer is as follows:
 
     -   Tweepy library is used for extracting the tweets.
 
-    -   Threading is used here to fasten the proces, each thread independently scrap the twitter, so that, maximum tweets can be scraped in less time.
+    -   Threading is used here to fasten the process, each thread independently scrap the twitter, so that, maximum tweets can be scraped in less time.
 
     -   Tweets are cleaned and filtered, and finally passed through TextBlob library's sentiment analyzer, to get the polarity of the tweets.
 
