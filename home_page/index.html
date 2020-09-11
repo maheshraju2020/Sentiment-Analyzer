@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sentiment Analyzer</title>
+        <link rel="stylesheet" href="search_bar.css" />
+        <link rel="stylesheet" href="search_items_hover.css" />
+        <link rel="stylesheet" href="nav_bar.css" />
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                outline: none;
+                /* box-sizing: border-box; */
+            }
+            #top {
+                height: 42vh;
+                background: #58bcff;
+                box-shadow: 0px 20px 20px #888;
+                position: relative;
+                z-index: 2;
+            }
+
+            #recent {
+                padding: 30px 0px 0px 30px;
+                font-size: 35px;
+                width: 100vh;
+                font-family: Arial, Helvetica, sans-serif;
+                /* text-decoration: underline; */
+            }
+
+            #recent_span {
+                border-bottom: 3px solid black;
+                user-select: none;
+            }
+
+            .items {
+                /* display: inline-block; */
+                transition: all 0.5s ease-in-out;
+                padding: 18px;
+                background: #ff75e8;
+                border: 2px black solid;
+                /* width: fit-content; */
+                border-radius: 10px;
+                font-size: 30px;
+                box-shadow: 10px 10px 10px #888;
+                user-select: none;
+                float: left;
+                margin-left: 20px;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar">
+            <span class="navbar-toggle" id="js-navbar-toggle"> </span>
+            <img class="logo" src="logo.svg" alt="" width="240" />
+            <!-- <ul class="main-nav" id="js-menu">
+				<li>
+					<a href="#" class="nav-links">About</a>
+				</li>
+			</ul> -->
+        </nav>
+        <div id="maindiv">
+            <div id="top">
+                <div id="searchBar">
+                    <form>
+                        <div class="tb">
+                            <div class="td">
+                                <input
+                                    type="text"
+                                    id="data"
+                                    placeholder="Enter Product name"
+                                    required
+                                />
+                            </div>
+                            <div class="td" id="s-cover">
+                                <button type="submit">
+                                    <div id="s-circle"></div>
+                                    <span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="bottom">
+                <div id="recent">
+                    <span id="recent_span">Recent Searches</span>
+                </div>
+                <div id="search"></div>
+                <div id="message">*double click on a card to remove it</div>
+            </div>
+        </div>
+        <script src="./form_handler.js"></script>
+        <script src="./recents.js"></script>
+        <script src="./adder.js"></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            let mainNav = document.getElementById("js-menu");
+            let navBarToggle = document.getElementById("js-navbar-toggle");
+
+            navBarToggle.addEventListener("click", function () {
+                mainNav.classList.toggle("active");
+            });
+        </script>
+    </body>
+</html>

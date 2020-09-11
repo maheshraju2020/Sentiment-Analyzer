@@ -1,0 +1,33 @@
+.items:hover {
+    transform: translateZ(20px) translateY(-10px);
+    transition: transform 0.3s;
+    z-index: 4;
+    background-color: #c532ad;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+#bottom {
+    /* margin-top: 20px; */
+    /* height: fit-content; */
+    /* height: ; */
+    width: 100%;
+    padding-bottom: 20px;
+    height: fit-content;
+    background: #b5c0f5;
+
+}
+
+#message {
+    margin-top: 20px;
+    margin-left: 30px;
+    font-size: 15px;
+
+}
+
+#search {
+    margin-top: 10px;
+    width: auto;
+    height: 200px;
+    overflow-y: scroll;
+}

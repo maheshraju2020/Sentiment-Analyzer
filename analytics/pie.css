@@ -1,0 +1,23 @@
+#charts {
+    /* background: #9a92c9; */
+    background: #b7aee7;
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.card {
+    box-shadow: 10px 15px 10px #888;
+}
+
+.graph {
+    background: #d3d3d3;
+    height: 250px;
+}
+
+.title {
+    font-size: 30px;
+    padding: 10px;
+    color: white;
+    background: #575252;
+    text-align: center;
+}

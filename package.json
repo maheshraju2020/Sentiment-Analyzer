@@ -1,0 +1,25 @@
+{
+  "name": "sentiment_analyzer",
+  "version": "1.0.0",
+  "description": "App for analyzing sentiments",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "files": [
+    "*.js",
+    "build",
+    "node_modules"
+  ],
+  "author": "S Mahesh Raju",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^8.0.3",
+    "electron-hot-reload": "^0.1.4",
+    "electron-reload": "^1.5.0",
+    "jquery": "^3.4.1",
+    "python-shell": "^1.0.8",
+    "require": "^2.4.20",
+    "requirejs": "^2.3.6"
+  }
+}

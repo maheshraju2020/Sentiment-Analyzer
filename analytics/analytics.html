@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="nav_bar.css" />
+        <link rel="stylesheet" href="pie.css" />
+
+        <!-- <link
+			href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css?hcode=c11e6e3cfefb406e8ce8d99fa8368d33"
+			type="text/css"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css?hcode=c11e6e3cfefb406e8ce8d99fa8368d33"
+			type="text/css"
+			rel="stylesheet"
+		/> -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <style type="text/css">
+            .anychart-tooltip {
+                background: #fff;
+                border: 2px solid #ccc;
+                /* max-width: 300px; */
+                color: #545f69;
+            }
+        </style>
+
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                outline: none;
+                /* box-sizing: border-box; */
+            }
+            .navbar {
+                position: fixed;
+                width: 100%;
+            }
+
+            #charts {
+                padding-top: 40px;
+                /* position: absolute; */
+            }
+            #wrapper1 {
+                width: 100%;
+                display: grid;
+                /* padding: 30px; */
+                grid-template-columns: 370px 650px;
+                column-gap: 35px;
+                row-gap: 40px;
+                justify-content: center;
+                /* align-items: center; */
+            }
+            #wrapper2,
+            #wrapper4 {
+                margin-top: 35px;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1060px;
+                column-gap: 35px;
+                row-gap: 40px;
+                justify-content: center;
+            }
+            #wrapper3 {
+                width: 100%;
+                display: grid;
+                margin-top: 35px;
+                grid-template-columns: 650px 370px;
+                column-gap: 35px;
+                row-gap: 40px;
+                justify-content: center;
+                /* align-items: center; */
+            }
+            .graph3 {
+                height: 300px;
+            }
+            .graph4 {
+                height: 400px;
+            }
+            #result {
+                padding-top: 100px;
+                font-size: 40px;
+                padding-left: 40px;
+                /* height: 200px; */
+                /* color: white; */
+                background: #b7aee7;
+                text-decoration: underline;
+            }
+            .lists {
+                display: flex;
+                vertical-align: middle;
+                font-size: 30px;
+                padding: 10px;
+                padding-left: 30px;
+                background: rgb(230, 208, 208);
+                display: grid;
+                grid-template-columns: 230px 20px;
+                margin-top: 5px;
+            }
+            .percent {
+                padding-left: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar">
+            <img class="back" src="arrow.png" alt="" />
+            <img class="logo" src="logo.svg" alt="" />
+            <!-- <ul class="main-nav" id="js-menu">
+				<li>
+					<a href="#" class="nav-links">About</a>
+				</li>
+			</ul> -->
+        </nav>
+        <div id="result">Results for S20</div>
+        <div id="charts">
+            <div id="wrapper1">
+                <div class="card" id="card1">
+                    <div class="title">Overall Sentiment</div>
+                    <div class="graph" id="piechart"></div>
+                </div>
+                <div class="card" id="card2">
+                    <div class="title">Interest Over Time</div>
+                    <div class="graph" id="spinechart"></div>
+                </div>
+            </div>
+            <div id="wrapper2">
+                <div class="card" id="card3">
+                    <div class="title">Day-Wise Sentiment Distribution</div>
+                    <div class="graph3" id="multigraph"></div>
+                </div>
+            </div>
+            <div id="wrapper3">
+                <div class="card" id="card3">
+                    <div class="title">Country-Wise Sentiment Contribution</div>
+                    <div class="graph3" id="country"></div>
+                </div>
+                <div class="card" id="card4">
+                    <div class="title">Top Countries</div>
+                    <div id="countrylist"></div>
+                </div>
+            </div>
+            <div id="wrapper4">
+                <div class="card" id="card5">
+                    <div class="title">
+                        Geography-Wise Sentiment Distribution
+                    </div>
+                    <div class="graph4" id="container"></div>
+                </div>
+            </div>
+        </div>
+        <script src="title_modifier.js"></script>
+        <script src="canvasjs.min.js"></script>
+        <script src="charts.js"></script>
+        <script src="back_handler.js"></script>
+        <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js?hcode=c11e6e3cfefb406e8ce8d99fa8368d33"></script>
+        <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js?hcode=c11e6e3cfefb406e8ce8d99fa8368d33"></script>
+        <script src="https://cdn.anychart.com/releases/v8/js/anychart-map.min.js?hcode=c11e6e3cfefb406e8ce8d99fa8368d33"></script>
+        <script src="https://cdn.anychart.com/releases/v8/js/anychart-data-adapter.min.js?hcode=c11e6e3cfefb406e8ce8d99fa8368d33"></script>
+        <script src="https://cdn.anychart.com/geodata/2.0.0/custom/world/world.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.15/proj4.js"></script>
+        <script src="maps.js"></script>
+        <script src="top_countries.js"></script>
+    </body>
+</html>
